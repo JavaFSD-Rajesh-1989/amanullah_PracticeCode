@@ -1,0 +1,11 @@
+public class User {
+    private String name;
+    
+    public String getName() { return name; }
+    public void setName(String name) { this.name = name; }
+}
+jsp page:
+<%-- useBean.jsp --%>
+<jsp:useBean id="user" class="User" scope="page" />
+<jsp:setProperty name="user" property="name" value="John Doe" />
+<h1>Welcome, <jsp:getProperty name="user" property="name" />!</h1>

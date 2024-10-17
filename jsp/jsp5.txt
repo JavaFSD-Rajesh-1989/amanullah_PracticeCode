@@ -1,0 +1,15 @@
+
+public class HelloTag extends SimpleTagSupport {
+    public void doTag() throws JspException, IOException {
+        JspWriter out = getJspContext().getOut();
+        out.println("Hello from custom tag!");
+    }
+}
+<error-page>
+    <exception-type>java.lang.Throwable</exception-type>
+    <location>/error.jsp</location>
+</error-page>
+<%-- error.jsp --%>
+<body>
+    <h1>Error Occurred: <%= exception.getMessage() %></h1>
+</body>

@@ -1,0 +1,10 @@
+<%-- setSession.jsp --%>
+<% 
+    session.setAttribute("username", "JohnDoe"); 
+%>
+<p>Session set!</p>
+<%-- getSession.jsp --%>
+<% 
+    String username = (String) session.getAttribute("username"); 
+%>
+<p>Welcome back, <%= username %>!</p>
